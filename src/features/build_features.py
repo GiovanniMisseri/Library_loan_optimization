@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import os
 
 ### DATA FEATURES ###
 def add_syn_latlon(df):
@@ -62,7 +62,7 @@ def create_books(num_books, num_libraries):
     return books
 
 def save_data(df, name_df, folder='synthetic'):
-    df.to_csv('./data/{}/{}.csv'.format([folder, name_df]), index=False)
+    df.to_csv('../data/{}/{}.csv'.format(folder, name_df), index=False)
 
 
 
